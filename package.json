@@ -1,6 +1,6 @@
 {
   "name": "hermes",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "private": true,
   "workspaces": [
     "apps/*",
@@ -10,7 +10,8 @@
     "build": "turbo run build",
     "dev": "turbo run dev --parallel",
     "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "clean": "turbo run clean && rm -rf node_modules",
+    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md}\" --ignore-path .gitignore"
   },
   "devDependencies": {
     "eslint-config-custom": "*",
