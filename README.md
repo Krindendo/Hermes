@@ -76,10 +76,16 @@ Learn more about the power of Turborepo:
 - [Configuration Options](https://turborepo.org/docs/reference/configuration)
 - [CLI Usage](https://turborepo.org/docs/reference/command-line-reference)
 
+## Tips for yarn
+
+yarn workspace server add express-jwt
+
+yarn dev --scope server
+
 ## Playlist
 
 https://www.youtube.com/watch?v=QXUifHrXctQ
 
-https://www.youtube.com/watch?v=edM1oxTjNjQ
+https://www.youtube.com/watch?v=YJhlm2aTS0M
 
 https://www.youtube.com/watch?v=TO-_3tck2tg
