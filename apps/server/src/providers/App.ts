@@ -1,7 +1,7 @@
-import Express from './Express';
+import Express from "./Express";
 
 class App {
-  public loadServer (): void {
+  public loadServer(): void {
     Express.init();
   }
 }
