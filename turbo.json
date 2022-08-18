@@ -15,7 +15,10 @@
     "lint": {
       "outputs": []
     },
-    "clean": {
+    "clean:linux": {
+      "cache": false
+    },
+    "clean:win": {
       "cache": false
     }
   }

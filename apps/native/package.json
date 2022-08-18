@@ -7,7 +7,9 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
-    "eject": "expo eject"
+    "eject": "expo eject",
+    "clean:linux": "rm -rf node_modules && rm -rf .turbo",
+    "clean:win": "rmdir /s /q node_modules && rmdir /s /q .turbo"
   },
   "jest": {
     "preset": "jest-expo"

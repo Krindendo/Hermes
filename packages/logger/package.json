@@ -10,9 +10,10 @@
   ],
   "scripts": {
     "build": "tsc",
-    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
+    "clean:linux": "rm -rf node_modules && rm -rf dist && rm -rf .turbo",
+    "clean:win": "rmdir /s /q node_modules && rmdir /s /q dist && rmdir /s /q .turbo",
     "dev": "tsc -w",
-    "lint": "TIMING=1 eslint src/**/*.ts* --fix",
+    "lint": "set TIMING=1 && eslint src/**/*.ts* --fix",
     "test": "jest"
   },
   "jest": {

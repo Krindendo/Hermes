@@ -11,7 +11,8 @@
     "dev": "turbo run dev --parallel",
     "test": "turbo run test",
     "lint": "turbo run lint",
-    "clean": "turbo run clean && rm -rf node_modules",
+    "clean:linux": "turbo run clean:linux && rm -rf node_modules",
+    "clean:win": "turbo run clean:win && rmdir /s /q node_modules",
     "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md}\" --ignore-path .gitignore",
     "prepare": "husky install"
   },
@@ -20,7 +21,7 @@
     "husky": "^8.0.1",
     "lint-staged": "^13.0.3",
     "prettier": "latest",
-    "turbo": "latest"
+    "turbo": "^1.4.3"
   },
   "engines": {
     "yarn": ">=1.22.0",
