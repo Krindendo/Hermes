@@ -1,5 +1,5 @@
 class Home {
-  public static index(req, res, next): any {
+  public static index(req: any, res: any, next: any): void {
     return res.json({
       message: "Hello world :D",
     });
