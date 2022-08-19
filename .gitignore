@@ -13,6 +13,7 @@ coverage
 .swc/
 out/
 build
+.cache
 
 # expo
 .expo
@@ -20,7 +21,10 @@ build
 # misc
 .DS_Store
 *.pem
+*.log
+*.local
 dist
+dist-ssr
 
 # debug
 npm-debug.log*
@@ -35,3 +39,7 @@ yarn-error.log*
 
 # turbo
 .turbo
+
+# apps
+server/dist
+public/dist

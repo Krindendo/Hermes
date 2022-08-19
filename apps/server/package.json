@@ -5,12 +5,15 @@
   "license": "MIT",
   "scripts": {
     "build": "tsc",
-    "clean:linux": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
-    "clean:win": "rmdir /s /q node_modules && rmdir /s /q dist && rmdir /s /q .turbo ",
     "dev": "nodemon --exec \"node -r esbuild-register ./src/index.ts\" -e .ts",
     "lint": "tsc --noEmit && set TIMING=1 && eslint src/**/*.ts* --fix",
     "start": "node -r esbuild-register ./src/index.ts",
+    "clean:linux": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
+    "clean:win": "rmdir /s /q node_modules && rmdir /s /q dist && rmdir /s /q .turbo ",
     "test": "jest --detectOpenHandles --passWithNoTests"
+  },
+  "jest": {
+    "preset": "jest-presets/jest/node"
   },
   "dependencies": {
     "body-parser": "^1.19.0",
@@ -31,7 +34,7 @@
     "esbuild": "^0.14.38",
     "esbuild-register": "^3.3.2",
     "eslint": "^7.32.0",
-    "config": "*",
+    "eslint-config-custom-server": "*",
     "jest": "^26.6.3",
     "jest-presets": "*",
     "nodemon": "^2.0.15",
