@@ -1,5 +1,5 @@
 module.exports = {
-  extends: ["eslint:recommended", "turbo"],
+  extends: ["eslint:recommended", "plugin:@typescript-eslint/recommended", "turbo", "prettier"],
   env: {
     node: true,
     es6: true,
@@ -16,4 +16,7 @@ module.exports = {
       },
     },
   ],
+  rules: {
+    "@typescript-eslint/no-explicit-any": "warn",
+  },
 };

@@ -14,7 +14,7 @@ class Express {
   }
 
   public init(): any {
-    const port: number = 3001;
+    const port = 3001;
 
     this.express
       .listen(port, () => {
