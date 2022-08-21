@@ -1,7 +1,7 @@
 {
   "pipeline": {
     "build": {
-      "outputs": ["dist/**", ".next/**", "public/dist/**"],
+      "outputs": ["dist/**", ".next/**"],
       "dependsOn": ["^build"]
     },
     "test": {

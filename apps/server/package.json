@@ -6,7 +6,7 @@
   "scripts": {
     "build": "tsc",
     "dev": "nodemon --exec \"node -r esbuild-register ./src/index.ts\" -e .ts",
-    "lint": "tsc --noEmit && eslint src/**/*.ts* --fix",
+    "lint": "tsc --noEmit && eslint src/**/*.ts*",
     "start": "node -r esbuild-register ./src/index.ts",
     "clean:linux": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
     "clean:win": "rmdir /s /q node_modules && rmdir /s /q dist && rmdir /s /q .turbo ",
@@ -20,7 +20,6 @@
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "express-jwt": "^7.7.5",
-    "logger": "*",
     "morgan": "^1.10.0"
   },
   "devDependencies": {
