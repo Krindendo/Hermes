@@ -15,10 +15,7 @@
     "dev": {
       "cache": false
     },
-    "clean:linux": {
-      "cache": false
-    },
-    "clean:win": {
+    "clean": {
       "cache": false
     }
   }

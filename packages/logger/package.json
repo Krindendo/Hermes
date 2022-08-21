@@ -10,8 +10,7 @@
   ],
   "scripts": {
     "build": "tsc",
-    "clean:linux": "rm -rf node_modules && rm -rf dist && rm -rf .turbo",
-    "clean:win": "rmdir /s /q node_modules && rmdir /s /q dist && rmdir /s /q .turbo",
+    "clean": "rm -rf node_modules && rm -rf dist && rm -rf .turbo",
     "dev": "tsc -w",
     "lint": "eslint src/**/*.ts* --fix",
     "test": "jest"
