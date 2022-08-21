@@ -9,7 +9,7 @@
     "lint": "tsc --noEmit && eslint src/**/*.ts*",
     "start": "node -r esbuild-register ./src/index.ts",
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
-    "test": "jest --detectOpenHandles --passWithNoTests"
+    "test1": "jest --detectOpenHandles --passWithNoTests"
   },
   "jest": {
     "preset": "jest-presets/jest/node"
@@ -25,14 +25,12 @@
     "@types/body-parser": "^1.19.0",
     "@types/cors": "^2.8.10",
     "@types/express": "^4.17.12",
-    "@types/jest": "^26.0.22",
     "@types/morgan": "^1.9.2",
     "@types/node": "^15.12.2",
     "@types/supertest": "^2.0.11",
     "esbuild": "^0.14.38",
     "esbuild-register": "^3.3.2",
     "eslint-config-custom-server": "*",
-    "jest": "^26.6.3",
     "jest-presets": "*",
     "nodemon": "^2.0.15",
     "supertest": "^6.1.3",

@@ -22,5 +22,12 @@
     "lint-staged": "^13.0.3",
     "prettier": "^2.7.1",
     "turbo": "latest"
-  }
+  },
+  "engines": {
+    "yarn": ">=1.22.0",
+    "node": ">=14.0.0",
+    "npm": "please-use-yarn"
+  },
+  "dependencies": {},
+  "packageManager": "yarn@1.22.19"
 }
