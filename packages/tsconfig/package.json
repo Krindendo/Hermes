@@ -3,5 +3,10 @@
   "version": "0.0.0",
   "private": true,
   "main": "index.js",
-  "license": "MIT"
+  "files": [
+    "base.json",
+    "nextjs.json",
+    "server.json",
+    "native.json"
+  ]
 }

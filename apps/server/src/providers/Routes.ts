@@ -1,3 +1,5 @@
+/* eslint class-methods-use-this: "warn" */
+
 import { Application } from "express";
 
 import router from "../routes";

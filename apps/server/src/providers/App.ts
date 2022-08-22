@@ -1,9 +1,9 @@
 import Express from "./Express";
 
 class App {
-  public loadServer(): void {
+  public static loadServer(): void {
     Express.init();
   }
 }
 
-export default new App();
+export default App;

@@ -1,4 +1,5 @@
-import { log } from "..";
+/* eslint no-console: "warn" */
+import log from "..";
 
 jest.spyOn(global.console, "log");
 
