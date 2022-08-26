@@ -8,6 +8,7 @@ Remove-Item -LiteralPath "./packages/logger/dist" -Force -Recurse
 Remove-Item -LiteralPath "./packages/logger/coverage" -Force -Recurse
 Remove-Item -LiteralPath "./packages/logger/node_modules" -Force -Recurse
 
+Remove-Item -LiteralPath "./apps/native/.expo" -Force -Recurse
 Remove-Item -LiteralPath "./apps/native/node_modules" -Force -Recurse
 
 Remove-Item -LiteralPath "./apps/server/dist" -Force -Recurse

@@ -7,7 +7,8 @@
     "packages/*"
   ],
   "scripts": {
-    "dev": "turbo run dev --parallel",
+    "dev:web": "turbo run dev --filter=web --filter=server",
+    "dev:native": "turbo run dev --filter=native --filter=server",
     "build": "turbo run build",
     "lint": "turbo run lint",
     "test": "turbo run test",

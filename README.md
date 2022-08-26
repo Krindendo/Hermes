@@ -1,21 +1,21 @@
 # Hermes monorepo application
 
+This is an application that has been made with Turborepo
+
 ---
 
 **IMPORTANT: This app is still being developed.**
 
 ---
 
-This is an application that has been made with Turborepo
-
 ## Apps and Packages
 
-- `native`: a [React Native](https://reactnative.dev) built with expo
-- `server`: a [Express.js](https://expressjs.com) server
-- `web`: a [Next.js](https://nextjs.org) app
-- `logger`: isomorphic logger (a small wrapper around console.log)
-- `config`: Jest and eslint configurations
-- `tsconfig`: `tsconfig.json`s used throughout the monorepo
+- [native](https://github.com/Krindendo/Hermes/blob/main/apps/native/README.md): a [React Native](https://reactnative.dev) built with expo
+- [server](https://github.com/Krindendo/Hermes/blob/main/apps/server/README.md): a [Express.js](https://expressjs.com) server
+- [web](https://github.com/Krindendo/Hermes/blob/main/apps/web/README.md): a [Next.js](https://nextjs.org) app
+- [logger](https://github.com/Krindendo/Hermes/blob/main/packages/logger/README.md): package for record events
+- [config](https://github.com/Krindendo/Hermes/blob/main/packages/config/README.md): Jest and eslint configurations
+- [tsconfig](https://github.com/Krindendo/Hermes/blob/main/packages/tsconfig/README.md): `tsconfig.json`s used throughout the monorepo
 
 Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
 
@@ -30,7 +30,7 @@ Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
 
 ## How to start application
 
-minimum requirements is
+Minimum requirements is
 
 - [yarn](https://yarnpkg.com/getting-started/install): 1.22.0
 - [nodejs](https://nodejs.org/en): 14.0.0
@@ -39,18 +39,20 @@ and you can't use npm in this app. You can, but you need to remove one line of c
 
 ### How to start native application
 
-If you want to open app in your mobile, you only need to install app on your phone called [Expo](https://expo.dev/client) , connect mobile with pc and start it from console,
+If you want to open app in your mobile, you only need to install app on your phone called [Expo](https://expo.dev/client), connect mobile with computer and start this app from console.
 
 But if you want to test an app on a virtual machine, you will have to do a few things first:
 
-1. In Bios, enable Virtualization Technology. If your PC doesn't support virualization, then press F to pay respects for your computer. If you succesfuly enabled virtualization then you can continue reading. If not, you can only test app in your mobile.
+1. Enable Virtualization Technology in BIOS. If your PC doesn't support virualization, then press F to pay respects for your computer. If you succesfuly enabled virtualization then you can continue reading. If not, you can only test app in your mobile.
 2. In Windows features enable Hyper-V and restart computer.
 3. Install [Android Studio](https://developer.android.com/studio/index.html)
-4. Open Androdi Strudio as **Administrator**
+4. **Open Androdi Strudio as Administrator**
 5. Launch SDK Manager and install Android 12.0(S) in SDK Platforms,
-6. In SDK Tools install Android SDK Build-Tools, Android Emulator, Android Emulator Hypervisor or Intel x86 Emulator, Android SDK Platform and Android SDK Tools
-7. Set the ANDROID_HOME environment variable (detailed instructions are available at https://reactnative.dev/docs/environment-setup).
-8. Start a virtual machine, then launch the app from the console. In this case, your phone must not be connected to the computer.
+6. In SDK Tools install Android SDK Build-Tools, Android Emulator, Android Emulator Hypervisor or Intel x86 Emulator and Android SDK Platform and Android SDK Tools
+7. Set the ANDROID_HOME environment variable (detailed instructions are available at https://reactnative.dev/docs/environment-setup and click React Native CLI Quickstart).
+8. Also update the Path environment variable
+9. In this case, your phone must not be connected to the computer.
+10. Start a virtual machine, then launch the app from the console and type `yarn dev:native`.
 
 ### How to start server application
 
@@ -60,13 +62,15 @@ But if you want to test an app on a virtual machine, you will have to do a few t
 
 ### How to start web application
 
+You don't need to add config to the application.
+
+Open root of project and type in console: `yarn dev:web`
+
 ---
 
 ## Tips for yarn
 
 yarn workspace server add express-jwt
-
-yarn dev --scope server
 
 ## Playlist
 

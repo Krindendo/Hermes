@@ -8,7 +8,7 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "eject": "expo eject",
-    "dev": "yarn start",
+    "dev": "yarn android",
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
     "test1": "jest --ci",
     "test:coverage": "jest --coverage"
