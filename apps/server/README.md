@@ -9,13 +9,25 @@ GeekyAnts / express-typescript
 ```javascript
 
 //Auth
-router.post("api/v1/register") // {}
-router.post("api/v1/getLoginOptions") // {}
-router.post("api/v1/loginWithEmail") // {}
-router.post("api/v1/logout") // {}
-router.post("api/v1/forgotPassword") // {}
+router.post("api/v1/accounts/register") // {}
+router.post("api/v1/accounts/get-login-options") // {}
+router.post("api/v1/accounts/login-with-email") // {}
+router.post("api/v1/accounts/logout") // {}
+
+router.post("api/v1/accounts/refresh-token") // {}
+router.post("api/v1/accounts/revoke-token") // {}
+router.post("api/v1/accounts/verify-email") // {}
+router.post("api/v1/accounts/validate-reset-token") // {}
+router.post("api/v1/accounts/forgot-password") // {}
+router.post("api/v1/accounts/reset-password") // {}
+
+router.get("api/v1/accounts/{id}") // {}
+router.put("api/v1/accounts/{id}") // {}
+router.delete("api/v1/accounts/{id}") // {}
 
 //Transfer Files
+
+router.post("api/v1/upload") // {}
 
 ```
 
