@@ -12,17 +12,23 @@
     "test:coverage": "jest --coverage"
   },
   "dependencies": {
+    "@tanstack/react-table": "^8.5.11",
     "next": "latest",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "styled-components": "^5.3.5"
   },
   "devDependencies": {
     "@types/node": "^17.0.12",
     "@types/react": "^18.0.14",
     "@types/react-dom": "^17.0.11",
-    "eslint": "^8.19.0",
+    "@types/styled-components": "^5.1.26",
     "config": "*",
+    "eslint": "^8.19.0",
     "tsconfig": "*",
     "typescript": "^4.7.4"
+  },
+  "resolutions": {
+    "styled-components": "^5"
   }
 }
