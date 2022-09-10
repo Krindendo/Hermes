@@ -36,6 +36,8 @@ module.exports = {
       },
     ],
     "react/react-in-jsx-scope": "off",
+    "react/prop-types": "off",
+    "react/require-default-props": "off",
 
     // next
     "@next/next/no-html-link-for-pages": "off",
@@ -49,9 +51,22 @@ module.exports = {
       files: ["**/__tests__/**/*.[jt]s?(x)", "**/?(*.)+(spec|test).[jt]s?(x)"],
       extends: ["plugin:testing-library/react", "plugin:jest/recommended"],
       rules: {
-        "import/no-extraneous-dependencies": ["off", { devDependencies: ["**/?(*.)+(spec|test).[jt]s?(x)"] }],
+        "import/no-extraneous-dependencies": [
+          "off",
+          { devDependencies: ["**/?(*.)+(spec|test).[jt]s?(x)"] },
+        ],
       },
     },
   ],
-  ignorePatterns: ["**/*.js", "**/*.json", "node_modules", "public", "styles", ".next", "coverage", "dist", ".turbo"],
+  ignorePatterns: [
+    "**/*.js",
+    "**/*.json",
+    "node_modules",
+    "public",
+    "styles",
+    ".next",
+    "coverage",
+    "dist",
+    ".turbo",
+  ],
 };

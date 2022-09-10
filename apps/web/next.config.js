@@ -6,7 +6,6 @@ module.exports = {
       boolean |
       {
         displayName: true,
-        // Enabled by default.
         fileName: true,
       },
   },
