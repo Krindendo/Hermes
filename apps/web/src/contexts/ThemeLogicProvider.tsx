@@ -1,12 +1,22 @@
-import { createContext } from "react";
+import { createContext, ReactNode, useContext } from "react";
 
-import useToggleTheme, { initTheme, UseToggleThemeOutput } from "@/hooks/useToggleTheme";
+import { useThemeChange, initTheme, UseChangeThemeOutput } from "@/src/shared-hooks/useThemeChange";
+import { ThemeProvider } from "styled-components";
 
-export const ThemeContext = createContext<UseToggleThemeOutput>(initTheme);
+export const ThemeContext = createContext<UseChangeThemeOutput>(initTheme);
 
-const ThemeLogicProvider = ({ children }: any) => {
-  const theme = useToggleTheme();
-  return <ThemeContext.Provider value={theme}>{children}</ThemeContext.Provider>;
+interface ThemeLogicProviderProps {
+  children: ReactNode;
+}
+
+export const ThemeLogicProvider = ({ children }: ThemeLogicProviderProps) => {
+  const theme = useThemeChange();
+
+  return (
+    <ThemeContext.Provider value={theme}>
+      <ThemeProvider theme={theme.themeModeStyles}>{children}</ThemeProvider>
+    </ThemeContext.Provider>
+  );
 };
 
-export default ThemeLogicProvider;
+export const useThemeContext = () => useContext(ThemeContext);

@@ -1,9 +1,19 @@
 import React, { ButtonHTMLAttributes, DetailedHTMLProps } from "react";
 import styled, { css } from "styled-components";
 
-const Container = styled.button<ButtonProps>`
-  cursor: pointer;
-`;
+export type ButtonProps = DetailedHTMLProps<
+  ButtonHTMLAttributes<HTMLButtonElement>,
+  HTMLButtonElement
+> & {
+  size?: keyof typeof sizeClassnames;
+  color?: keyof typeof colorClassnames;
+};
+
+const Button: React.FC<ButtonProps> = ({ children, disabled, ref, ...props }) => (
+  <Container data-testid="button" {...props}>
+    {children}
+  </Container>
+);
 
 const sizeClassnames = {
   big: css`
@@ -23,25 +33,11 @@ const colorClassnames = {
   transparent: css``,
 };
 
-export type ButtonProps = DetailedHTMLProps<
-  ButtonHTMLAttributes<HTMLButtonElement>,
-  HTMLButtonElement
-> & {
-  size?: keyof typeof sizeClassnames;
-  color?: keyof typeof colorClassnames;
-};
+const Container = styled.button<ButtonProps>`
+  cursor: pointer;
 
-const Button: React.FC<ButtonProps> = ({
-  children,
-  size = "big",
-  color = "primary",
-  disabled,
-  ref,
-  ...props
-}) => (
-  <Container data-testid="button" {...props}>
-    {children}
-  </Container>
-);
+  ${(props) => sizeClassnames[props.size || "big"]}
+  ${(props) => colorClassnames[props.color || "primary"]}
+`;
 
 export default Button;

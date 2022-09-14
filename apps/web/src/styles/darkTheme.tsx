@@ -4,7 +4,7 @@ import colors from "./baseColor";
 const darkTheme: DefaultTheme = {
   palette: {
     primary: {
-      main: colors.gray.B700,
+      main: "",
       light: "",
       dark: "",
       contrastText: "",

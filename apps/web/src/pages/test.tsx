@@ -1,20 +1,19 @@
 import type { NextPage } from "next";
-import { useContext } from "react";
 
-import { ThemeContext } from "@/src/contexts/ThemeLogicProvider";
-import { ThemeMode } from "@/hooks/useToggleTheme";
+import { useThemeContext } from "@/src/contexts/ThemeLogicProvider";
+import { ThemeMode } from "@/src/shared-hooks/useThemeChange";
 import Button from "@/ui/Button";
 
 const Test: NextPage = () => {
-  const themeContext = useContext(ThemeContext);
+  const themeContext = useThemeContext();
   const handleChangeTheme = (theme: ThemeMode) => {
     themeContext.setThemeMode(theme);
   };
   return (
-    <div>
+    <Container>
       <Button onClick={() => handleChangeTheme(ThemeMode.light)}>Light mode</Button>
       <Button onClick={() => handleChangeTheme(ThemeMode.dark)}>Dark mode</Button>
-    </div>
+    </Container>
   );
 };
 
