@@ -6,6 +6,8 @@ This is an application that has been made with Turborepo
 
 **IMPORTANT: This app is still being developed.**
 
+**The progress can be seen in the [Roadmap](https://github.com/Krindendo/Hermes/blob/main/Roadmap.md) folder.**
+
 ---
 
 ## Apps and Packages
