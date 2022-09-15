@@ -10,10 +10,10 @@ const Test: NextPage = () => {
     themeContext.setThemeMode(theme);
   };
   return (
-    <Container>
-      <Button onClick={() => handleChangeTheme(ThemeMode.light)}>Light mode</Button>
-      <Button onClick={() => handleChangeTheme(ThemeMode.dark)}>Dark mode</Button>
-    </Container>
+    <div>
+      <Button onClick={() => handleChangeTheme("light")}>Light mode</Button>
+      <Button onClick={() => handleChangeTheme("dark")}>Dark mode</Button>
+    </div>
   );
 };
 

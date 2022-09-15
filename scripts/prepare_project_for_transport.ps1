@@ -1,22 +1,33 @@
-#Get-ChildItem -Path $Destination -Recurse | Remove-Item -force -recurse
+# if ($host.Version -gt [Version]'7.0.0.0'){
+#     "The minimum required version for PowerShell is version 7"
+#     Exit
+# }
 
-Remove-Item -LiteralPath "./node_modules" -Force -Recurse
-Remove-Item -LiteralPath "./packages/config/node_modules" -Force -Recurse
+$Paths = ,"./node_modules" # main
+$Paths += ,"./packages/config/node_modules" # config
+$Paths += ,"./packages/logger/.turbo", "./packages/logger/dist", "./packages/logger/coverage", "./packages/logger/node_modules" # logger
+$Paths += ,"./apps/native/.expo", "./apps/native/node_modules" # native
+$Paths += ,"./apps/server/.turbo", "./apps/server/dist", "./apps/server/coverage", "./apps/server/node_modules" # server
+$Paths += ,"./apps/web/.turbo", "./apps/web/.next", "./apps/web/coverage", "./apps/web/node_modules" # web
 
-Remove-Item -LiteralPath "./packages/logger/.turbo" -Force -Recurse
-Remove-Item -LiteralPath "./packages/logger/dist" -Force -Recurse
-Remove-Item -LiteralPath "./packages/logger/coverage" -Force -Recurse
-Remove-Item -LiteralPath "./packages/logger/node_modules" -Force -Recurse
+ForEach ($Path in $Paths) {
+  if(Test-Path -LiteralPath $Path){
+    Remove-Item -LiteralPath $Path -Force -Recurse
+  }
+}
 
-Remove-Item -LiteralPath "./apps/native/.expo" -Force -Recurse
-Remove-Item -LiteralPath "./apps/native/node_modules" -Force -Recurse
+# It is faster to delete it synchronous
+# workflow Remove-Folders
+# {
+#   param (
+#     [string[]] $Paths
+#   )
 
-Remove-Item -LiteralPath "./apps/server/dist" -Force -Recurse
-Remove-Item -LiteralPath "./apps/server/.turbo" -Force -Recurse
-Remove-Item -LiteralPath "./apps/server/coverage" -Force -Recurse
-Remove-Item -LiteralPath "./apps/server/node_modules" -Force -Recurse
+#   ForEach -Parallel -Throttlelimit 6 ($Path in $Paths) {
+#     if(Test-Path -LiteralPath $Path){
+#       Remove-Item -LiteralPath $Path -Force -Recurse
+#     }
+#   }
+# }
 
-Remove-Item -LiteralPath "./apps/web/.next" -Force -Recurse
-Remove-Item -LiteralPath "./apps/web/.turbo" -Force -Recurse
-Remove-Item -LiteralPath "./apps/web/coverage" -Force -Recurse
-Remove-Item -LiteralPath "./apps/web/node_modules" -Force -Recurse
+# Remove-Folders -Paths $Paths | Get-Counter
