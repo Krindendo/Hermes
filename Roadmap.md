@@ -4,20 +4,77 @@ This file provides an overview of the direction this project is heading.
 
 ### Current version: 0.1.0
 
+## v0.0.0 - Starting project ✔
+
+- Create project with Turborepo boilerplate
+- Create github repository
+- Find ui design
+
 ## v0.1.0 - Basic Infrastructure ✔
 
-In this phase of the project the focus is on X, Y and Z. The expected features are:
+Modify the boilerplate to fit the project
 
-- Something the user can do.
+- Add Mobile Application, backend and frontend
 - Description of a feature.
+- Find ui design
+- Make documentation
+
+## v0.2.0 - Implement testing packages
+
+Add and configure packages for frontend and backend:
+
+- Jest
+- Cypress
+- Storybook
+
+## v0.3.0 - Make ui components for the frontend
+
+Components to make:
+
+- Button, Spinner, Input
+- Need to make test for each component
+
+## v0.3.1 - Make shared components for the frontend
+
+Shared components are made from ui components.
+
+- 
+- Need to make test for each component
+
+## v0.3.2 - Make shared modules for the frontend
+
+Modules are made from shared components.
+
+- 
+- Need to make test for each module
+
+## v0.3.3 - Make pages for the frontend
+
+Pages are made from modules.
+
+- Login page, register page
+- Need to make test for each page
+
+## v0.4.0 - It's time to modify backend
+
+Create database 
+
+- Publish database on PlanetScale
+- Implement [Prisma](https://www.prisma.io/)
 - Ability to save things.
-- Etc.
 
-## v0.2.0 - User Experience
+## v0.4.1 - Connecting the frontend and backend
 
-In this phase of the project the focus is on A, B and C. The expected features are:
+In this phase of the project, the focus is on implementing tRPC on the server and on the web, so we will have typesafe APIs.
 
-- Something the user can do.
-- Description of a feature.
-- Ability to save things.
-- Etc.
+- Implement [trpc](https://trpc.io/)
+
+
+
+
+## v1.0.0 - Publishing the application
+
+The application is ready to go
+
+- Publishing frontend on vercel
+- Publishing backend on PlanetScale
