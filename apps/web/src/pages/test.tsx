@@ -11,6 +11,7 @@ const Test: NextPage = () => {
   };
   return (
     <div>
+      <h1>Test Page</h1>
       <Button onClick={() => handleChangeTheme("light")}>Light mode</Button>
       <Button onClick={() => handleChangeTheme("dark")}>Dark mode</Button>
     </div>

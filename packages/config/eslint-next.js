@@ -2,6 +2,7 @@ module.exports = {
   env: {
     browser: true,
     node: true,
+    "cypress/globals": true,
   },
   extends: [
     "next",
@@ -9,10 +10,11 @@ module.exports = {
     "airbnb-typescript",
     "plugin:import/recommended",
     "plugin:import/typescript",
+    "plugin:cypress/recommended",
     "turbo",
     "prettier",
   ],
-  plugins: ["@typescript-eslint", "import"],
+  plugins: ["@typescript-eslint", "import", "cypress"],
   settings: {
     next: {
       rootDir: ["apps/*/", "packages/*/"],
@@ -39,6 +41,8 @@ module.exports = {
     "react/prop-types": "off",
     "react/require-default-props": "off",
     "react/jsx-props-no-spreading": ["error", { custom: "ignore" }],
+
+    "jsx-a11y/anchor-is-valid": "off",
 
     // next
     "@next/next/no-html-link-for-pages": "off",
