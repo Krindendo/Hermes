@@ -38,14 +38,14 @@ Components to make:
 
 Shared components are made from ui components.
 
-- 
+-
 - Need to make test for each component
 
 ## v0.3.2 - Make shared modules for the frontend
 
 Modules are made from shared components.
 
-- 
+-
 - Need to make test for each module
 
 ## v0.3.3 - Make pages for the frontend
@@ -57,9 +57,9 @@ Pages are made from modules.
 
 ## v0.4.0 - It's time to modify backend
 
-Create database 
+Create database
 
-- Publish database on PlanetScale
+- Publish database on Supabase
 - Implement [Prisma](https://www.prisma.io/)
 - Ability to save things.
 
@@ -69,12 +69,9 @@ In this phase of the project, the focus is on implementing tRPC on the server an
 
 - Implement [trpc](https://trpc.io/)
 
-
-
-
 ## v1.0.0 - Publishing the application
 
 The application is ready to go
 
-- Publishing frontend on vercel
-- Publishing backend on PlanetScale
+- Publishing frontend on Vercel
+- Publishing backend on Render

@@ -26,7 +26,7 @@ Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
 - [TypeScript](https://www.typescriptlang.org) for static type checking
 - [ESLint](https://eslint.org) for code linting
 - [Prettier](https://prettier.io) for code formatting
-- [Jest](https://jestjs.io) for testring javascript code
+- [Jest](https://jestjs.io) for testring typescript code
 - [Cypress](https://www.cypress.io/) for end to end testing
 - [Storybook](https://storybook.js.org) for test react components
 
