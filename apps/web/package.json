@@ -13,7 +13,9 @@
     "cypress": "cypress open",
     "cypress:headless": "cypress run",
     "e2e": "start-server-and-test dev http://localhost:3000 cypress",
-    "e2e:headless": "start-server-and-test dev http://localhost:3000 cypress:headless"
+    "e2e:headless": "start-server-and-test dev http://localhost:3000 cypress:headless",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "dependencies": {
     "@tanstack/react-table": "^8.5.11",
@@ -25,14 +27,25 @@
     "usehooks-ts": "^2.6.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.19.3",
+    "@storybook/addon-actions": "^6.5.12",
+    "@storybook/addon-essentials": "^6.5.12",
+    "@storybook/addon-interactions": "^6.5.12",
+    "@storybook/addon-links": "^6.5.12",
+    "@storybook/builder-webpack5": "^6.5.12",
+    "@storybook/manager-webpack5": "^6.5.12",
+    "@storybook/react": "^6.5.12",
+    "@storybook/testing-library": "^0.0.13",
     "@types/node": "^17.0.12",
     "@types/react": "^18.0.14",
     "@types/react-dom": "^17.0.11",
     "@types/styled-components": "^5.1.26",
+    "babel-loader": "^8.2.5",
     "config": "*",
     "cypress": "^10.8.0",
     "eslint": "^8.19.0",
     "eslint-plugin-cypress": "^2.12.1",
+    "eslint-plugin-storybook": "^0.6.6",
     "start-server-and-test": "^1.14.0",
     "tsconfig": "*",
     "typescript": "^4.7.4"

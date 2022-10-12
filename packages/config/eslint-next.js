@@ -11,6 +11,7 @@ module.exports = {
     "plugin:import/recommended",
     "plugin:import/typescript",
     "plugin:cypress/recommended",
+    "plugin:storybook/recommended",
     "turbo",
     "prettier",
   ],
