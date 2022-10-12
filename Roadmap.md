@@ -36,14 +36,14 @@ Components to make:
 
 ## v0.3.1 - Make shared components for the frontend
 
-Shared components are made from ui components.
+Shared components only hold functionality
 
 -
 - Need to make test for each component
 
 ## v0.3.2 - Make shared modules for the frontend
 
-Modules are made from shared components.
+Modules will only hold functionality that is relevant for that top-level page.
 
 -
 - Need to make test for each module

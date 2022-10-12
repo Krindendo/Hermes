@@ -34,10 +34,8 @@ export type ButtonProps = DetailedHTMLProps<
   color?: keyof typeof colorClassnames;
 };
 
-const Button: React.FC<ButtonProps> = ({ children, disabled, ref, ...props }) => (
+export const Button: React.FC<ButtonProps> = ({ children, disabled, ref, ...props }) => (
   <Container data-testid="button" {...props}>
     {children}
   </Container>
 );
-
-export default Button;
